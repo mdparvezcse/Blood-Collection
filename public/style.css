@@ -1,0 +1,216 @@
+/* all margin and padding 0px */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body-bg{
+  background-image: url(images/Project_69-01.jpg);
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Navbar  styles*/
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  padding: 12px 20px;
+  z-index: 1000;
+  box-shadow: 5px 5px 10px red, -5px -5px 10px red;
+}
+
+.navbar .container {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  color: rgb(231, 21, 21);
+  font-size: 44px;
+  font-weight: 900px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 30px;
+
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background: tomato;
+  transform: scale(1.5);
+}
+
+/* Form Wrapper styles*/
+.form-wrapper {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px red, -2px -2px 5px yellow;
+}
+
+/* Form Heading styles */
+.form-wrapper h2 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(203, 133, 41);
+}
+
+/* Inputs and Buttons styles */
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+button {
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #eee0e0;
+  color: #333;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border: 1px solid #e9210f;
+  box-shadow: 0 0 10px #ec1616e5;
+  background: hsl(0, 0%, 100%);
+}
+
+/* Button */
+button {
+  background-color: #bad016;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: tomato;
+  transform: scale(1.1);
+}
+
+/* Links below forms */
+a {
+  color: #00bcd4;
+  text-align: center;
+  display: block;
+  margin-top: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Results on search page */
+#results p {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 0;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 80px 10px 80px;
+  }
+
+  .form-wrapper {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .form-wrapper h2 {
+    font-size: 22px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"],
+  button {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    background: rgba(0, 188, 212, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .navbar .container {
+    flex-wrap: wrap;
+  }
+}
+
+.menu-icon {
+  display: none;
+}

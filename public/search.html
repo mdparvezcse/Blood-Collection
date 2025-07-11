@@ -1,0 +1,52 @@
+<!-- public/search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Donor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-bg">
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">🩸 Blood Bank</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="add.html">Add Donor</a></li>
+        <li><a href="search.html">Search Donor</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="form-wrapper">
+    <h2>Search Donor</h2>
+    <form id="searchForm">
+      <input type="text" name="bloodGroup" placeholder="Enter Blood Group" required>
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+  </div>
+
+  <footer>© 2025 Blood Bank. All rights reserved.</footer>
+
+  <script>
+    const form = document.getElementById('searchForm');
+    const resultsDiv = document.getElementById('results');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const res = await fetch('/search-donor', {
+        method: 'POST',
+        body: new URLSearchParams(formData),
+      });
+      const donors = await res.json();
+      resultsDiv.innerHTML = donors.length
+        ? donors.map(d => `<p><strong>${d.name}</strong> (${d.bloodGroup}) - ${d.phone} - ${d.location}</p>`).join('')
+        : '<p>No donor found.</p>';
+    });
+  </script>
+</body>
+</html>

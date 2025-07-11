@@ -1,0 +1,36 @@
+<!-- public/add.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Donor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-bg">
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">🩸 Blood Bank</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="add.html">Add Donor</a></li>
+        <li><a href="search.html">Search Donor</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="form-wrapper">
+    <h2>Add Donor</h2>
+    <form action="/add-donor" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="bloodGroup" placeholder="Blood Group (e.g., A+)" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>© 2025 Blood Bank. All rights reserved.</footer>
+</body>
+</html>
