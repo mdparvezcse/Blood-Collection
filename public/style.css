@@ -17,7 +17,31 @@
   align-items: center;
   flex-direction: column;
 }
-
+/* home style */
+  .banner{
+    text-align: center;
+  }
+  .banner-title h1{
+    font-size: 97px;
+    font-weight: 900px;
+    color: #fff;
+  }
+  .banner-title p{
+    font-size: 34px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .banner-bg{
+  background-image: url(images/banner.jpg);
+  background-size: cover;
+  color: #f1e9e9;
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
 /* Navbar  styles*/
 .navbar {
   width: 100%;
@@ -122,7 +146,18 @@ button:hover {
   background-color: tomato;
   transform: scale(1.1);
 }
-
+.home-button button{
+  gap: 40px;
+  padding: 5px 12px;
+  background-color: #333;
+  color: wheat;
+}
+.home-button button:hover{
+  background-color: tomato;
+}
+.home-button a{
+  text-decoration: none;
+}
 /* Links below forms */
 a {
   color: #00bcd4;
